@@ -55,6 +55,7 @@ use XeDynamicField;
 use XeDocument;
 use XeSkin;
 use Illuminate\Console\Application as Artisan;
+use Xpressengine\Plugins\Board\Commands\BoardSkinMakeWithBaseSkin;
 use Xpressengine\Support\Exceptions\AccessDeniedHttpException;
 
 /**
@@ -257,6 +258,7 @@ class Resources
     {
         $commands = [
             BoardSkinMake::class,
+            BoardSkinMakeWithBaseSkin::class
         ];
 
         Artisan::starting(function ($artisan) use ($commands) {
